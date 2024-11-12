@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question 9</title>
+        <style>
+            :root {
+                --primary-c: #6495ED
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            main {
+                padding-top: 12em;
+                margin-inline: 6em;
+                display: flex;
+                flex-direction: column;
+                row-gap: 2em;
+            }
+
+            .container {
+                display: inline-flex;
+                align-items: center;
+                column-gap: 1em;
+            }
+
+            input, button {
+                padding-block: 0.5em;
+                padding-inline: 2em;
+                border: 2px solid rgba(0, 0, 0, 0.2);
+                border-radius: 32px;
+            }
+
+            button {
+                cursor: pointer !important;
+                transition: all 200ms ease-out;
+            }
+
+            button:hover {
+                background-color: var(--primary-c);
+                color: white;
+            }
+
+            img {
+                border-radius: 4px;
+                box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Show image with URL</h1>
+            <div class="container">
+                <input type="text" id="urlInput" placeholder="Enter an img URL">
+                <button onclick="showImage()">Show Image</button>
+            </div>
+            <img src="" id="image">
+        </main>
+        <script>
+            const inputElem = document.getElementById("urlInput");
+
+            function showImage() {
+                img = document.querySelector("#image");
+                url = inputElem.value;
+            
+                img.setAttribute("src", url);
+            }
+        </script>
+    </body>
+</html>

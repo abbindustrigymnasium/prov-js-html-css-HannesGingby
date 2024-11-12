@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Question 8</title>
+    </head>
+    <body>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight: 600;">Open console</p>
+        <script>
+            let numbers = [12, 25, 37, 43, 59, 61];
+
+            function filterEvenNumbers(list) {
+                return list.filter(checkIsEven);
+            }
+
+            function checkIsEven(num) {
+                return num % 2 == 0;
+            }
+
+            console.log("New list: " + filterEvenNumbers(numbers));
+        </script>
+    </body>
+</html>
